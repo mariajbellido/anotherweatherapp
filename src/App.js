@@ -55,7 +55,7 @@ export default function App() {
             </div>
             <div className="wind">
               {data.wind ? (
-                <p className="bold">{data.wind.speed.toFixed} KPH</p>
+                <p className="bold">{data.wind.speed.toFixed()} KPH</p>
               ) : null}
               <p>Wind Speed </p>
             </div>
