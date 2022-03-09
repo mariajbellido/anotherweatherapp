@@ -13,6 +13,7 @@ export default function App() {
         setData(response.data);
         console.log(response.data);
       });
+      setLocation("");
     }
   };
 
@@ -30,10 +31,12 @@ export default function App() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>Barcelona</p>
+            <p>{data.name}</p>
           </div>
           <div className="temp">
-            <h1>Temperature</h1>
+            {data.main ? (
+              <h1>{Math.round(data.main.temp - 273.15)}ºC</h1>
+            ) : null}
           </div>
           <div className="description">
             <p>Description</p>
