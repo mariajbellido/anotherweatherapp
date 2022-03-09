@@ -20,13 +20,16 @@ export default function App() {
         </div>
         <div className="bottom">
           <div className="feels">
-            <p>Feels</p>
+            <p className="bold">40</p>
+            <p>Feels like</p>
           </div>
           <div className="humidity">
+            <p className="bold">20%</p>
             <p>Humidity</p>
           </div>
           <div className="wind">
-            <p>Wind</p>
+            <p className="bold">12 MPH</p>
+            <p>Wind Speed </p>
           </div>
         </div>
       </div>
