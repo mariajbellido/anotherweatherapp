@@ -56,7 +56,9 @@ export default function App() {
             <p>Humidity</p>
           </div>
           <div className="wind">
-            {data.main ? <p className="bold">{data.main.wind}MPH</p> : null}
+            {data.wind ? (
+              <p className="bold">{(data.wind.speed * 1.6).toFixed(2)} KPH</p>
+            ) : null}
             <p>Wind Speed </p>
           </div>
         </div>
