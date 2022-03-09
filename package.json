@@ -6,6 +6,7 @@
     "openweathermap",
     "react",
     "api",
+    "weatherapp",
     "hooks"
   ],
   "main": "src/index.js",
