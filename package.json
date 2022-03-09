@@ -1,8 +1,13 @@
 {
   "name": "anotherweatherapp",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Another Weather App using React and OpenWeatherMap API",
+  "keywords": [
+    "openweathermap",
+    "react",
+    "api",
+    "hooks"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "axios": "0.26.0",
