@@ -42,26 +42,29 @@ export default function App() {
             {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
-        <div className="bottom">
-          <div className="feels">
-            {data.main ? (
-              <p className="bold">
-                {Math.round(data.main.feels_like - 273.15)}ºC
-              </p>
-            ) : null}
-            <p>Feels like</p>
+
+        {data.name != undefined && (
+          <div className="bottom">
+            <div className="feels">
+              {data.main ? (
+                <p className="bold">
+                  {Math.round(data.main.feels_like - 273.15)}ºC
+                </p>
+              ) : null}
+              <p>Feels like</p>
+            </div>
+            <div className="humidity">
+              {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
+              <p>Humidity</p>
+            </div>
+            <div className="wind">
+              {data.wind ? (
+                <p className="bold">{(data.wind.speed * 1.6).toFixed(2)} KPH</p>
+              ) : null}
+              <p>Wind Speed </p>
+            </div>
           </div>
-          <div className="humidity">
-            {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
-            <p>Humidity</p>
-          </div>
-          <div className="wind">
-            {data.wind ? (
-              <p className="bold">{(data.wind.speed * 1.6).toFixed(2)} KPH</p>
-            ) : null}
-            <p>Wind Speed </p>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
