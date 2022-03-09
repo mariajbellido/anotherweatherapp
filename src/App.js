@@ -39,20 +39,24 @@ export default function App() {
             ) : null}
           </div>
           <div className="description">
-            <p>Description</p>
+            {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
         <div className="bottom">
           <div className="feels">
-            <p className="bold">40</p>
+            {data.main ? (
+              <p className="bold">
+                {Math.round(data.main.feels_like - 273.15)}ºC
+              </p>
+            ) : null}
             <p>Feels like</p>
           </div>
           <div className="humidity">
-            <p className="bold">20%</p>
+            {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
             <p>Humidity</p>
           </div>
           <div className="wind">
-            <p className="bold">12 MPH</p>
+            {data.main ? <p className="bold">{data.main.wind}MPH</p> : null}
             <p>Wind Speed </p>
           </div>
         </div>
